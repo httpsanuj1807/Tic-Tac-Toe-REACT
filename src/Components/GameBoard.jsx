@@ -37,7 +37,7 @@ function GameBoard({onSelectSquare, turns}){
                             return (<li key={colIndex}>
                                 <button onClick={() => {
                                     onSelectSquare(rowIndex,colIndex)
-                                }}>{activePlayerSymbol}</button>
+                                }} disabled={activePlayerSymbol !== null}>{activePlayerSymbol}</button>
                             </li>)
                         })}
                     </ol>
